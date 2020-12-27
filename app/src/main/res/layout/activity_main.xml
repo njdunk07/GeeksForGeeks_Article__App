@@ -1,16 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/background"
+    android:padding="20dp">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="COME BACK"
-        android:layout_centerInParent="true"
-        android:id="@+id/butVar1"/>
+        android:text="GFG | Android"
+        android:id="@+id/tvVar2"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginBottom="40dp"/>
+
+    //show the results here
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tvVar2"
+        android:id="@+id/tvVar1"
+        android:text="WINNER : Player 1"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:fontFamily="sans-serif-smallcaps"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvVar1"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+
+        <LinearLayout
+            android:layout_marginBottom="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            //show player 1 name
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="#000000"
+                android:padding="10dp"
+                android:text="Player 1"/>
+
+            //show player 2 name
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="#000000"
+                android:padding="10dp"
+                android:text="Player 2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            //player 1 dice image
+            <ImageView
+                android:id="@+id/ivVar1"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:padding="10dp"
+                android:src="@drawable/dice6"/>
+
+            //player 2 dice image
+            <ImageView
+                android:id="@+id/ivVar2"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:padding="10dp"
+                android:src="@drawable/dice6"/>
+
+        </LinearLayout>
+
+        //button to roll the dice
+        <Button
+            android:id="@+id/btVar1"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:text="Roll the Dice"
+            android:background="@drawable/btn_bg5"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:padding="12dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
 
 </RelativeLayout>
